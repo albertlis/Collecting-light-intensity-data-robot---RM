@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.12)  19 MAR 2019 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.3.20)  31 MAR 2019 21:00
 entering extended mode
 **./opis_projektu.tex
 (opis_projektu.tex
@@ -896,63 +896,52 @@ been already used, duplicate ignored
                    \relax 
 l.79 \newpage
               [1]
-<diag1.jpg, id=66, 575.14874pt x 195.73125pt>
-File: diag1.jpg Graphic file (type jpg)
-<use diag1.jpg>
-Package pdftex.def Info: diag1.jpg  used on input line 87.
-(pdftex.def)             Requested size: 364.19667pt x 123.94449pt.
-<diag2.jpg, id=67, 431.6125pt x 186.6975pt>
-File: diag2.jpg Graphic file (type jpg)
-<use diag2.jpg>
-Package pdftex.def Info: diag2.jpg  used on input line 94.
-(pdftex.def)             Requested size: 364.19667pt x 157.53986pt.
+<diag3.png, id=66, 442.65375pt x 372.39125pt>
+File: diag3.png Graphic file (type png)
+<use diag3.png>
+Package pdftex.def Info: diag3.png  used on input line 87.
+(pdftex.def)             Requested size: 318.66948pt x 268.09875pt.
  [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.126 \end{enumerate}
-                     pdfTeX warning (ext4): destination with the same identifie
-r (name{figure.2}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.126 \end{enumerate}
-                      <./diag1.jpg> <./diag2.jpg>]
-<gantt.png, id=81, 1294.8375pt x 527.9725pt>
+l.127 	
+        <./diag3.png>]
+<gantt.png, id=83, 1294.8375pt x 527.9725pt>
 File: gantt.png Graphic file (type png)
 <use gantt.png>
-Package pdftex.def Info: gantt.png  used on input line 147.
+Package pdftex.def Info: gantt.png  used on input line 152.
 (pdftex.def)             Requested size: 500.77129pt x 204.19247pt.
 
-Overfull \hbox (45.52718pt too wide) in paragraph at lines 147--148
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 152--153
  [][] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
-[3pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
+[3pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.166 \end{document}
+l.171 \end{document}
                      <./gantt.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 171.
  (opis_projektu.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 171.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
 Package rerunfilecheck Info: File `opis_projektu.out' has not changed.
 (rerunfilecheck)             Checksum: 0F0F5317E06D6327ADE751E4C91604DA;1120.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 171.
  ) 
 Here is how much of TeX's memory you used:
- 13760 strings out of 493802
- 188453 string characters out of 3158063
- 488429 words of memory out of 3000000
- 17305 multiletter control sequences out of 15000+200000
+ 13755 strings out of 493801
+ 188748 string characters out of 3158049
+ 488404 words of memory out of 3000000
+ 17301 multiletter control sequences out of 15000+200000
  14893 words of font info for 35 fonts, out of 3000000 for 9000
  625 hyphenation exceptions out of 8191
- 33i,9n,51p,401b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 33i,9n,51p,436b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dp
 i600\ecbx1200.pk> <C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
 /jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\
@@ -967,9 +956,9 @@ MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1440.pk> <C:\Users\Papa Smerf
 \AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk><E:/Pr
 ogramy/Miktex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/Programy/Miktex/font
 s/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on opis_projektu.pdf (4 pages, 159046 bytes).
+Output written on opis_projektu.pdf (4 pages, 154029 bytes).
 PDF statistics:
- 411 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
- 88 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 404 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

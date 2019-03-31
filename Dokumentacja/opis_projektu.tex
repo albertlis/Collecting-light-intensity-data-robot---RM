@@ -19,7 +19,7 @@
 %\newcommand{\doctype}{Dokumentacja} %etap III
 
 %wpisz nazwę projektu
-\newcommand{\projectname}{Robot mobilny z samopozycjonującą się platformą fotowoltaniczną}
+\newcommand{\projectname}{Robot mobilny z platformą fotowoltaniczną}
 
 %wpisz akronim projektu
 %\newcommand{\acronim}{WK}
@@ -80,29 +80,26 @@
 
 %Obecne we wszystkich dokumentach
 \section{Opis projektu}
-Celem projektu jest stworzenie robota sterowanego za pomocą akcelerometru w telefonie. Dane będą przesyłanie za pomocą Wi-Fi. Robot będzie zasilany ogniwami fotowoltanicznymi. W celu maksymalizacji uzyskanej energii słonecznej platforma powinna pozycjonować się prostopadle do padającego światła. Sterowanie robotem jest odseparowane od sterowania platformą.
+Celem projektu jest stworzenie robota sterowanego który będzie zbierał informacje o natężeniu światła w danej okolicy. Robot powinien poruszać się na ograniczonej przestrzeni i cyklicznie przykładowo co 20cm pobierać informacje o natężeniu światła. Po zgromadzeniu danych robot zostanie podłączony do komputera za pomocą portu szeregowego i stamtąd zostaną pobrane dane do wizualizacji.
 
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.8\textwidth]{diag1.jpg}
+		\includegraphics[width=0.7\textwidth]{diag3.png}
 		\caption{Architektura robota}
 		\label{fig:Architektura robota}
 	\end{figure}
 
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.8\textwidth]{diag2.jpg}
-		\caption{Architektura platformy}
-		\label{fig:Architektura platformy}
-	\end{figure}
 \section{Założenia projektowe}
 
 \subsection{Mechanika}
 \begin{enumerate}
+	\item Sterowanie robotem
+	\newline
+	Skręcanie zostanie zrealizowane za pomocą serwa $180^\circ$ natomiast napęd za pomocą silnika szczotkowego DC.
 	
 	\item Sterowanie platformą
 	\newline
-	Realizowane w oparciu o dwa serwomechanizmy. Jeden będzie odpowiedzialny za pozycjonowanie wertykalne (serwo $180^\circ$) natomiast drugi za horyzontalne (serwo $360^\circ$).
+	Realizowane w oparciu o serwomechanizm i silnik krokowy. Serwo $180^\circ$ będzie odpowiedzialne za pozycjonowanie wertykalne natomiast silnik krokowy za horyzontalne. Wynika to z konieczności obrotu > $360^\circ$.
 	
 	\item Podstawa oraz separator fotorezystorów
 	\newline
@@ -112,17 +109,25 @@ Celem projektu jest stworzenie robota sterowanego za pomocą akcelerometru w tel
 
 \subsection{Elektronika}
 \begin{enumerate}
-	\item Mikrokontrolery
+	\item Mikrokontroler
 	\newline
-	Do sterowania robotem zostanie użyty sterownik STM32L476GDiscovery. Natomiast do realizacji pozycjonowania platformy zostanie użyty sterownik Arduino Mega2560.
+	Do sterowania robotem zostanie użyty sterownik Arduino Mega2560.
 	
 	\item Zasilanie
 	\newline
-	Oparte o akumulatory li-ion 18650 lub powerbank. Ustalenie napięcia 5V za pomocą przetwornicy step-up MT3608 do zasilania płytki Arduino oraz serwomechanizmów. Dodatkowo użycie przetwornicy step-down do napięcia 3.3V w celu zasilenia mikrokontrolera STM32L476GDiscovery i modułu Wi-Fi.
+	Oparte o akumulatory li-ion 18650 lub powerbank. Ustalenie napięcia 5V za pomocą przetwornicy step-up MT3608 do zasilania płytki Arduino oraz napędu platformy i robota.
 	
-	\item Czujniki
+	\item Pozycjonowanie
 	\newline
 	Użyte zostaną 4 odseparowane fotorezystory gl5516. Ich wartości mierzone będą za pomocą portów analogowych  sterownika Arduino Mega2560.
+	
+	\item Pozycja
+	\newline
+	Do ustalania bieżącej pozycji zostaną wykorzystane enkodery.
+	
+	\item Pomiar natężenia światła
+	\newline
+	Wykorzystany zostanie czujnik
 \end{enumerate}
 
 \section{Harmonogram pracy}
