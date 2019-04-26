@@ -6,15 +6,16 @@
 #define STEPTIME 10
 #define TOLERANCE 10
 #define SERVOTIME 10
-#define LEFTPIN A0
-#define RIGHTPIN A1
-#define UPPIN A2
-#define DOWNPIN A3
+
+#define LEFT_DOWN_PIN A2
+#define RIGHT_DOWN_PIN A0
+#define LEFT_UP_PIN A3
+#define RIGHT_UP_PIN A1
 #define SERVOPIN A8
 #define DIRECTION 3
 
 Servo serwo;
-int16_t LeftValue = 0, RightValue = 0, UpValue = 0, DownValue = 0;
+int16_t Left_Up_Value = 0, Right_Up_Value = 0, Left_Down_Value = 0, Right_Down_Value = 0;
 uint16_t HorizontalDifference = 0, VerticalDifference = 0;
 int16_t StepCounter = 0;
 uint32_t ActualTime = 0, PreviousTimeStep = 0, PreviousTimePrint = 0, PreviousTimeServo = 0;
@@ -24,25 +25,56 @@ uint8_t sposition = 90;
 void setup() {
   // put your setup code here, to run once:
   pinMode(DIRECTION, OUTPUT);
-  pinMode(STP, OUTPUT);
   digitalWrite(DIRECTION, HIGH);
+  pinMode(STP, OUTPUT);
   Serial.begin(500000);
   serwo.attach(SERVOPIN);
-  serwo.write(sposition);
+  //serwo.write(sposition);
 }
-/*
-float mapfloat(float x, float in_min, float in_max, float out_min, float out_max)
-{
- return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-}
-*/
+
+void ReadLight();
+void SetServoPosition();
+//void SetStepperPosition();
+
 void loop() {
   ActualTime = millis();
   if( (ActualTime - PreviousTimeStep) >= STEPTIME )
   {
     PreviousTimeStep = ActualTime;
-    LeftValue = analogRead(LEFTPIN);
-    RightValue = analogRead(RIGHTPIN);
+    ReadLight();
+    //SetStepperPosition();
+  }
+  
+  if( (ActualTime - PreviousTimeServo) >= SERVOTIME )
+  {
+    PreviousTimeServo = ActualTime;
+    ReadLight();
+    SetServoPosition();
+    //serwo.write(170);
+  }
+  
+  if( (ActualTime - PreviousTimePrint) >= PRINTTIME )
+  {
+    PreviousTimePrint = ActualTime;
+    //Serial.println(String("") + "Lewa Up: " + Left_Up_Value + " Prawa Up: " + Right_Up_Value + " Left down: " + Left_Down_Value + " Right Down: " + Right_Down_Value);
+  }
+}
+
+
+
+
+
+
+void ReadLight()
+{
+    Left_Down_Value = analogRead(LEFT_DOWN_PIN);
+    Right_Down_Value = analogRead(RIGHT_DOWN_PIN);
+    Left_Up_Value = analogRead(LEFT_UP_PIN);
+    Right_Up_Value = analogRead(RIGHT_UP_PIN);
+}
+/*
+void SetStepperPosition()
+{
     HorizontalDifference = abs(LeftValue - RightValue);
     if ( HorizontalDifference > TOLERANCE)
     {
@@ -61,32 +93,25 @@ void loop() {
     }
     else
       StepCounter = 0;
-  }
-
-  if( (ActualTime - PreviousTimeServo) >= SERVOTIME )
-  {
-    PreviousTimeServo = ActualTime;
-    UpValue = analogRead(UPPIN);
-    DownValue = analogRead(DOWNPIN);
-    VerticalDifference = abs(UpValue - DownValue);
+}
+*/
+void SetServoPosition()
+{
+    int16_t UpSum = Right_Up_Value + Left_Up_Value;
+    int16_t DownSum = Left_Down_Value + Right_Down_Value;
+    VerticalDifference = abs(UpSum - DownSum);
     if ( VerticalDifference > TOLERANCE)
     {
-      if (UpValue > DownValue)
-      {
-        if(sposition < 180)
-          serwo.write(++sposition);
-      }
-      else if (UpValue < DownValue)
+      if (UpSum > DownSum)
       {
         if(sposition > 0)
           serwo.write(--sposition);
       }
+      else if (UpSum < DownSum)
+      {
+        if(sposition < 180)
+          serwo.write(++sposition);
+      }
     }
-  }
-  
-  if( (ActualTime - PreviousTimePrint) >= PRINTTIME )
-  {
-    PreviousTimePrint = ActualTime;
-    Serial.println(String("") + "Lewa: " + LeftValue + " Prawa: " + RightValue + " Różnica l|p: " + HorizontalDifference + " StepCounter: " + StepCounter/2);
-  }
+    Serial.println(String("") + "UpSum" + UpSum + " DownSum " + DownSum + " Difference " + VerticalDifference);
 }
