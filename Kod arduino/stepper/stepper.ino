@@ -4,7 +4,7 @@
 #define STEPTIME 5
 #define TOLERANCE 15
 #define SERVOTIME 20
-#define READTIME 2
+#define READTIME 4
 
 #define LEFT_DOWN_PIN A2
 #define RIGHT_DOWN_PIN A0
@@ -43,7 +43,6 @@ void loop() {
   {
     PreviousTimeRead = ActualTime;
     ReadLight();
-    Calculate();
   }
   if( (ActualTime - PreviousTimeStep) >= STEPTIME )
   {
@@ -73,18 +72,11 @@ void ReadLight()
     Right_Up_Value = analogRead(RIGHT_UP_PIN);
 }
 
-void Calculate()
+void SetStepperPosition()
 {
     SumRight = Right_Up_Value + Right_Down_Value;
     SumLeft = Left_Up_Value + Left_Down_Value;
     HorizontalDifference = abs(SumRight - SumLeft);
-    
-    UpSum = Right_Up_Value + Left_Up_Value;
-    DownSum = Left_Down_Value + Right_Down_Value;
-    VerticalDifference = abs(UpSum - DownSum);
-}
-void SetStepperPosition()
-{
     if ( HorizontalDifference > TOLERANCE)
     {
       if (SumRight > SumLeft)
@@ -106,6 +98,9 @@ void SetStepperPosition()
 
 void SetServoPosition()
 {
+    UpSum = Right_Up_Value + Left_Up_Value;
+    DownSum = Left_Down_Value + Right_Down_Value;
+    VerticalDifference = abs(UpSum - DownSum);
     if ( VerticalDifference > TOLERANCE)
     {
       if (UpSum > DownSum)
