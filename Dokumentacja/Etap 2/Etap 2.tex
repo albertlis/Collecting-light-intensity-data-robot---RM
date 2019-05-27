@@ -243,8 +243,8 @@ Celem projektu jest zbudowanie zdalnie sterowanego robota jezdnego. Robot będzi
 		\label{fig:Schemat elektryczny}
 	\end{figure}
 	
-\subsection{Regulacja prędkości napędu}
-Za pomocą potencjometru regulujemy wypełnienie sygnału PWM. Sygnał ten jest wzmacniany za pomocą tranzystora NPN i przekazywany do silnika DC.
+\subsection{Regulacja położenia wertykalnego}
+Do regulacji położenia wertykalnego robota wykorzystano serwo zamontowane na platformie. Jest ono sterowane za pomocą sygnału PWM z Arduino. Obok silnika krokowego zapewnia poruszanie się robota w kierunku światła. Serwo odpowiada za dokładne ustawienie prostopadle do słońca, podwyższając lub obniżając ścianki na których są zamontowane fotorezystory, natomiast silnik krokowy obraca postawę platformy w kierunku światła.
 
 \begin{figure}[H]
 	\centering
@@ -300,10 +300,24 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 \end{lstlisting}
 
 %Obecne w dokumencie do etapu II oraz III (jeśli coś zostało niezrealizowane)
-\section{Zadania niezrealizowane}
-Nie zostało zrealizowane przekazanie napędu z silnika i serwomechanizmu na mechanizm napędowy oraz na ten służący do skręcania. W pierwszym przypadku jest to spowodowane brakiem czasu, wynikający ze zbyt długim poszukiwaniem rozwiązania na problem przeniesienia napędu z silnika do przekładni, natomiast w drugim tym, że wał serwomechanizmu ma stępione zębatki co uniemożliwia przekazanie jakiejkolwiek siły na dalszy podzespół.
+\section{Zrealizowane zadania}
+\subsection{Wizualizacja}
+Udało się zrealizować wizualizację ukazującą natężenie światła w określonym miejscu w przestrzeni zrealizowaną dla przykładowych danych. Wizualizacja zakłada, że robot będzie poruszał się po polu prostokąta raz przy razie zbierając w ramach możliwości jak najdokładniejsze dane.
+\begin{figure}[H]
+\centering
+\includegraphics[width=13cm]{figures/wiz.png}
+\caption{Przykładowa wizualizacja}
+\end{figure}
 
-%Obecne we wszystkich dokumentach
+\section{Urządzenia zewnętrzne}
+Wykorzystywanym w projekcie urządzeniem zewnętrznym jest czujnik natężenia światła -- GY--30--BH1750. Czujnik został zamontowany na górze platformy z fotorezystorami w celu zbierania informacji potrzebnych do wizualizacji.
+\begin{figure}[H]
+\centering
+\includegraphics[width=6cm]{figures/gy.png}
+\caption{Czujnik wykorzystany na platformie}
+\end{figure}
+
+
 \section{Podsumowanie}
 
 Udało się zrealizować większość zadań. Nastąpiły drobne zmiany koncepcyjne jak użycie potencjometru do regulacji prędkości obrotowej napędu. To będzie wymagać mniejszej ingerencji gdy będziemy projektować regulator PID.
