@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {2}Urz\IeC {\k a}dzenia zewn\IeC {\k e}trzne}{2}{section.2}% 
 \contentsline {section}{\numberline {3}Projekt elektroniki}{2}{section.3}% 
 \contentsline {subsection}{\numberline {3.1}Schemat elektryczny}{2}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2}Regulacja pr\IeC {\k e}dko\IeC {\'s}ci nap\IeC {\k e}du}{2}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.2}Regulacja po\IeC {\l }o\IeC {\.z}enia wertykalnego}{2}{subsection.3.2}% 
 \contentsline {section}{\numberline {4}Konstrukcja mechaniczna}{3}{section.4}% 
 \contentsline {section}{\numberline {5}Opis dzia\IeC {\l }ania programu}{4}{section.5}% 
 \contentsline {subsection}{\numberline {5.1}Schemat dzia\IeC {\l }ania programu}{4}{subsection.5.1}% 
@@ -12,6 +12,8 @@
 \contentsline {subsection}{\numberline {5.3}Funkcja steruj\IeC {\k a}ca silnikiem krokowym}{4}{subsection.5.3}% 
 \contentsline {subsection}{\numberline {5.4}Funkcja steruj\IeC {\k a}ca serwomechanizmem platformy}{5}{subsection.5.4}% 
 \contentsline {subsection}{\numberline {5.5}Funkcje odpowiadaj\IeC {\k a}ce za sprawdzenie czy r\IeC {\'o}\IeC {\.z}nica odczyt\IeC {\'o}w jest wi\IeC {\k e}ksza od tolerancji}{5}{subsection.5.5}% 
-\contentsline {section}{\numberline {6}Zadania niezrealizowane}{6}{section.6}% 
-\contentsline {section}{\numberline {7}Podsumowanie}{6}{section.7}% 
-\contentsline {section}{Bibilografia}{7}{section.7}% 
+\contentsline {section}{\numberline {6}Zrealizowane zadania}{6}{section.6}% 
+\contentsline {subsection}{\numberline {6.1}Wizualizacja}{6}{subsection.6.1}% 
+\contentsline {section}{\numberline {7}Urz\IeC {\k a}dzenia zewn\IeC {\k e}trzne}{6}{section.7}% 
+\contentsline {section}{\numberline {8}Podsumowanie}{7}{section.8}% 
+\contentsline {section}{Bibilografia}{8}{section.8}% 
