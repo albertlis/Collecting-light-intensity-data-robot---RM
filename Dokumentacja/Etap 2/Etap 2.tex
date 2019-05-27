@@ -76,39 +76,7 @@
 \newpage
 
 %Obecne we wszystkich dokumentach
-\section{Opis projektu}
-\label{sec:OpisProjektu}
-
-Celem projektu jest zbudowanie zdalnie sterowanego robota jezdnego. Robot będzie sterowany za pomocą akcelerometru w telefonie. Dane będą przesyłanie za pomocą Wi-Fi lub Bluetooth. Regulacja prędkości będzie się odbywać za pomocą regulatora PID. Dane o prędkości będą pobierane z enkoderów znajdujących się w kołach robota. Opcjonalnie robot będzie wyświetlał szczegółowe dane o swoim stanie wewnętrznym za pomocą wbudowanego w płytkę z mikrokontrolerem wyświetlacza LCD.
-\newline
-\newline
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{figures/diagram.png}
-	\caption{Architektura systemu}
-	\label{fig:Architektura}
-\end{figure}
-
-%Obecne we wszystkich dokumentach
 \section{Konfiguracja mikrokontrolera}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1\textwidth]{figures/schemat-1.jpg}
-	\caption{Konfiguracja wyjść mikrokontrolera w programie STM32CubeMX}
-	\label{fig:KonfiguracjaMikrokontrolera}
-\end{figure}
-
-\newpage
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\textheight,angle=90]{figures/zegar.png}
-	\caption{Konfiguracja zegarów mikrokontrolera}
-	\label{fig:KonfiguracjaZegara}
-\end{figure}
-
-%Obecne we wszystkich dokumentach
 \subsection{Konfiguracja pinów}
 
 \begin{table}[H]
@@ -117,118 +85,23 @@ Celem projektu jest zbudowanie zdalnie sterowanego robota jezdnego. Robot będzi
 		\hline
 		PIN & Tryb pracy & Funkcja/etykieta\\
 		\hline
-		PC14 & OSC32\_IN*	RCC\_OSC32\_IN	&\\
-		PC15 & OSC32\_OUT*	RCC\_OSC32\_OUT	&\\
-		PH0&  OSC\_IN*	RCC\_OSC\_IN	&\\
-		PH1&  OSC\_OUT*&		RCC\_OSC\_OUT	\\
-		PD5&	USART2\_TX&	USART\_TX\\
-		PD6&	USART2\_RX&	USART\_RX\\
-		%PE11&	TIM1\_CH2&	PWM\_SERVO\\
-		PA0&	ADC1\_IN5&	PWM\_INPUT\\
-		PA1&	GPIO\_Input&	JOY\_LEFT\\
-		PA2&	GPIO\_Input&	JOY\_RIGHT\\
-		PA3&	GPIO\_Input&	JOY\_UP\\
-		PA4& GPIO\_Input& JOY\_DOWN\\
-		PA5&	TIM2\_CH1&	PWM\_MOTOR\\
-		PB7&    TIM4\_CH2&	PWM\_SERVO\\
-		
-		
+		A0& Analog Input & LEFT\_DOWN\_PIN \\
+		A1& Analog Input & RIGHT\_DOWN\_PIN \\
+		A2& Analog Input & LEFT\_UP\_PIN \\
+		A3& Analog Input & RIGHT\_UP\_PIN \\
+		0& Rx & RX \\
+		1& Tx & TX \\
+		5& Digital Output & SERVO\_PIN \\
+		6& Digital Output & DIRECTION \\
+		7& Digital Output & STP \\
 		\hline
 	\end{tabular}
 	\caption{Konfiguracja pinów mikrokontrolera}
 \end{table}
 
 %Obecne we wszystkich dokumentach
-\subsection{ADC 1}
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|l|c|} \hline
-		\textbf{Parametr} & Wartość \\
-		\hline
-		\hline  \textbf{Resolution}&ADC 12-bit resolution  \\\hline
-		\textbf{DMA Continuous Requests} & \textcolor{blue}{Enabled}\\\hline
-		\textbf{Data Alignment} &  Right alignment\\
-		\hline
-		\textbf{Continuous Conversion Mode}& Disabled\\
-		\hline
-		\textbf{Channel}& Channel 5\\
-		\hline
-		\textbf{Sampling Time}& \textcolor{blue}{92.5 Cycles}\\
-		\hline
-	\end{tabular}
-	\caption{Konfiguracja peryferium ADC}
-	\label{tab:ADC}
-\end{table}
-
-\subsection{Timer 2}
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|l|c|} \hline
-		\textbf{Parametr} & Wartość \\
-		\hline
-		\hline  \textbf{Clock Source}&Internal Clock  \\\hline
-		\textbf{Channel1} & PWM Generation CH1\\\hline
-		\textbf{Prescaler} & \textcolor{blue}{PWM\_PRESC}\\\hline
-		\textbf{Counter Mode} &  Up\\
-		\hline
-		\textbf{Counter Period}& \textcolor{blue}{PWM\_PERIOD}\\\hline
-		\textbf{Internal Clock Division}& No Division\\
-		\hline
-		\textbf{Mode}& PWM mode 1\\
-		\hline
-		\textbf{CH Polarity}& High\\
-		\hline
-	\end{tabular}
-	\caption{Konfiguracja peryferium Timer 2}
-	\label{tab:Timer2}
-\end{table}
-
-\subsection{Timer 4}
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|l|c|} \hline
-		\textbf{Parametr} & Wartość \\
-		\hline
-		\hline  \textbf{Clock Source}&Internal Clock  \\\hline
-		\textbf{Channel} & PWM Generation CH2\\\hline
-		\textbf{Prescaler} & \textcolor{blue}{999}\\\hline
-		\textbf{Counter Mode} &  Up\\
-		\hline
-		\textbf{Counter Period}& \textcolor{blue}{999}\\\hline
-		\textbf{Internal Clock Division}& No Division\\
-		\hline
-		\textbf{Mode}& PWM mode 1\\
-		\hline
-		\textbf{CH Polarity}& High\\
-		\hline
-	\end{tabular}
-	\caption{Konfiguracja peryferium Timer 4}
-	\label{tab:Timer4}
-\end{table}
-
-\subsection{Timer 6}
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|l|c|} \hline
-		\textbf{Parametr} & Wartość \\
-		\hline
-		\hline
-		\textbf{Prescaler} & \textcolor{blue}{TIM6\_PRESC}\\\hline
-		\textbf{Counter Mode} &  Up\\
-		\hline
-		\textbf{Counter Period}& \textcolor{blue}{TIM6\_PERIOD}\\\hline
-		\textbf{Trigger Event Selection}& \textcolor{blue}{Update Event}\\
-		\hline
-	\end{tabular}
-	\caption{Konfiguracja peryferium Timer 6}
-	\label{tab:Timer6}
-\end{table}
 %Obecne w dokumencie do etapu II oraz III
-%\section{Urządzenia zewnętrzne}
+\section{Urządzenia zewnętrzne}
 %\textcolor{red}{Rozdział ten powinien zawierać opis i konfigurację %wykorzystanych ukladów
 %	zewnętrznych, jak np. akcelerometr.}
 
@@ -281,21 +154,88 @@ Za pomocą potencjometru regulujemy wypełnienie sygnału PWM. Sygnał ten jest 
 		\label{fig:diagramPWM}
 	\end{figure}
 
-\subsection{Funkcja obsługująca przerwanie timera 6}
+\subsection{Funkcja czytająca natężenie światła}
+Jest odpowiedzialna za odczyt wartości i umieszczenie ich w tablicy.
 	\begin{lstlisting}[tabsize=2]
-	void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+	void ReadLight()
 	{
-		if(htim->Instance == TIM6)
-			HAL_ADC_Start_DMA(&hadc1, (uint32_t *)&adc_value, 1);
+		values[0] = analogRead(LEFT_DOWN_PIN);
+		values[1] = analogRead(RIGHT_DOWN_PIN);
+		values[2] = analogRead(LEFT_UP_PIN);
+		values[3] = analogRead(RIGHT_UP_PIN);
 	}
 	\end{lstlisting}
 
-\subsection{Funkcja obsługująca przerwanie ADC}
+\subsection{Funkcja sterująca silnikiem krokowym}
+Odpowiada za ruch platformy lewo-prawo. Realizuje poruszanie się w kierunku najintensywniejszego odczytu natężenia światła.
 \begin{lstlisting}[tabsize=2]
-void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+void SetStepperPosition()
 {
-	//pid_output = pid_calc(&pid, adc_value, set_value);
-	__HAL_TIM_SET_COMPARE(&htim2 , TIM_CHANNEL_1, adc_value);
+	//Jeśli różnica przekracza tolerancję
+	if (HorizontalDiff()) {
+		//Jeśli platforma jest obrócona wertykalnie w drugą stronę zmienia kierunek lewo/prawo
+		if (sposition > 90) {
+			//jeśli maksymalny odczyt z lewej strony
+			if ((pos == 0) || (pos == 2))
+			{
+			digitalWrite(DIRECTION, HIGH);
+			++StepCounter;
+		}
+		else {
+			digitalWrite(DIRECTION, LOW);
+			--StepCounter;
+		}
+	}
+	else {
+		if ((pos == 1) || (pos == 3)) {
+			digitalWrite(DIRECTION, HIGH);
+			++StepCounter;
+		}
+		else {
+			digitalWrite(DIRECTION, LOW);
+			--StepCounter;
+		}
+	}
+	//Wykonaj krok
+	digitalWrite(STP, state);
+	state = !state;
+	}
+}
+\end{lstlisting}
+
+\subsection{Funkcja sterująca serwomechanizmem platformy}
+\begin{lstlisting}[tabsize=2]
+void SetServoPosition()
+{
+	//Jeśli przekracza tolerancję
+	if (VerticalDiff()) {
+	//Jeśli maksimalny odczyt na dole
+	if ((pos == 0) || (pos == 1)) {
+		if (sposition > 0)
+			serwo.write(--sposition);
+		}
+		else {
+			if (sposition < 180)
+				serwo.write(++sposition);
+		}
+	}
+}
+\end{lstlisting}
+
+\subsection{Funkcje odpowiadające za sprawdzenie czy różnica odczytów jest większa od tolerancji}
+\begin{lstlisting}[tabsize=2]
+inline bool VerticalDiff()
+{
+	upMax = ( values[2] > values[3] ? values[2] : values[3] );
+	downMax = ( values[0] > values[1] ? values[0] : values[1] );
+	return ( abs(upMax - downMax) > TOLERANCE ? true : false );
+}
+
+inline bool HorizontalDiff()
+{
+	leftMax = ( values[0] > values[2] ? values[0] : values[2] );
+	rightMax = ( values[1] > values[3] ? values[1] : values[3]);
+	return ( abs(leftMax - rightMax) > TOLERANCE ? true : false);
 }
 \end{lstlisting}
 
