@@ -3,8 +3,8 @@
 
 #define PRINTTIME  1000
 #define STEPTIME 5
-#define TOLERANCE 15
-#define SERVOTIME 10
+#define TOLERANCE 20
+#define SERVOTIME 15
 #define READTIME 4
 
 #define LEFT_DOWN_PIN A0
