@@ -108,22 +108,29 @@
 
 %Obecne w dokumencie do etapu II oraz III
 \section{Projekt elektroniki}
-	\subsection{Schemat elektryczny}
+	\subsection{Schemat elektryczny połączenia z fotorezystorami}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1\textwidth]{figures/schemeit-project.png}
-		\caption{Schemat elektryczny}
-		\label{fig:Schemat elektryczny}
+		\includegraphics[width=1\textwidth]{figures/fotorezystory.png}
+		\caption{Schemat elektryczny połączenia z fotorezystorami}
+		\label{fig:Schemat foto}
 	\end{figure}
 	
-\subsection{Regulacja położenia wertykalnego}
+\subsection{Regulacja położenia wertykalnego i horyzontalnego}
 Do regulacji położenia wertykalnego robota wykorzystano serwo zamontowane na platformie. Jest ono sterowane za pomocą sygnału PWM z Arduino. Obok silnika krokowego zapewnia poruszanie się robota w kierunku światła. Serwo odpowiada za dokładne ustawienie prostopadle do słońca, podwyższając lub obniżając ścianki na których są zamontowane fotorezystory, natomiast silnik krokowy obraca postawę platformy w kierunku światła.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{figures/pwm.png}
-	\caption{Schemat poglądowy regulacji prędkości obrotowej silnika}
-	\label{fig:KonfiguracjaPWM}
+	\includegraphics[width=0.6\textwidth]{figures/servo.png}
+	\caption{Schemat elektryczny sterowania serwomechanizmem}
+	\label{fig:servo}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{figures/stepper.png}
+	\caption{Schemat elektryczny sterowania silnikiem krokowym}
+	\label{fig:stepper}
 \end{figure}
 
 %Obecne w dokumencie do etapu II oraz III
@@ -146,12 +153,12 @@ Do regulacji położenia wertykalnego robota wykorzystano serwo zamontowane na p
 %Obecne w dokumencie do etapu II oraz III
 \section{Opis działania programu}
 
-\subsection{Schemat działania programu}
+\subsection{Schemat działania programu sterującego platformą}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.8\textwidth]{figures/diagramPWM.png}
+		\includegraphics[width=0.8\textwidth]{figures/diagramplatforma.png}
 		\caption{Schemat działania programu}
-		\label{fig:diagramPWM}
+		\label{fig:diagramPlatforma}
 	\end{figure}
 
 \subsection{Funkcja czytająca natężenie światła}
@@ -264,8 +271,18 @@ Udało się zrealizować większość zadań. Nastąpiły drobne zmiany koncepcy
 
 \newpage
 \addcontentsline{toc}{section}{Bibilografia}
-\bibliography{bibliografia}
-\bibliographystyle{plabbrv}
+
+\begin{thebibliography}{9}
+	\bibitem{pa} Krzysztof Amborski, Andrzej Murusak:
+	\emph{Teoria sterowania w ćwiczeniach}, ('78)
+	
+	\bibitem{pa1} Jerzy Brzózka:
+	\emph{Regulatory i układy automatyki}, (2004)
+	
+	\bibitem{pa1} Krzysztof Tchoń:
+	\emph{Manipulatory i roboty mobilne : modele, planowanie ruchu, sterowanie}, (2000)
+	
+\end{thebibliography}
 
 
 \end{document}

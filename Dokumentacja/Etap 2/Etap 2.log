@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.3.20)  27 MAY 2019 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.6.4)  10 JUN 2019 16:06
 entering extended mode
 **"./Etap 2.tex"
 ("Etap 2.tex"
@@ -773,7 +773,11 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 ))
 \c@Dn=\count169
 \c@Ex=\count170
-) ("Etap 2.aux")
+) ("Etap 2.aux"
+
+LaTeX Warning: Label `pa1' multiply defined.
+
+)
 \openout1 = `"Etap 2.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
@@ -794,8 +798,7 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 42.
-
-(E:\Programy\Miktex\tex/latex/base\ts1cmr.fd
+ (E:\Programy\Miktex\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 42.
@@ -896,16 +899,16 @@ been already used, duplicate ignored
                    \relax 
 l.76 \newpage
               [1]
-<figures/schemeit-project.png, id=110, 863.47594pt x 312.41719pt>
-File: figures/schemeit-project.png Graphic file (type png)
-<use figures/schemeit-project.png>
-Package pdftex.def Info: figures/schemeit-project.png  used on input line 114.
-(pdftex.def)             Requested size: 455.24411pt x 164.71269pt.
-<figures/pwm.png, id=111, 569.12625pt x 478.03593pt>
-File: figures/pwm.png Graphic file (type png)
-<use figures/pwm.png>
-Package pdftex.def Info: figures/pwm.png  used on input line 124.
-(pdftex.def)             Requested size: 364.19667pt x 305.92006pt.
+<figures/fotorezystory.png, id=115, 611.28375pt x 225.84375pt>
+File: figures/fotorezystory.png Graphic file (type png)
+<use figures/fotorezystory.png>
+Package pdftex.def Info: figures/fotorezystory.png  used on input line 114.
+(pdftex.def)             Requested size: 455.24411pt x 168.19348pt.
+<figures/servo.png, id=117, 482.40225pt x 274.02374pt>
+File: figures/servo.png Graphic file (type png)
+<use figures/servo.png>
+Package pdftex.def Info: figures/servo.png  used on input line 124.
+(pdftex.def)             Requested size: 273.14923pt x 155.16656pt.
  [2pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
 has been already used, duplicate ignored
 
@@ -918,114 +921,142 @@ l.128
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.128 
-       <./figures/schemeit-project.png>]
-<figures/20190410_135905.jpg, id=119, 728.4816pt x 409.7709pt>
+       <./figures/fotorezystory.png>]
+<figures/stepper.png, id=126, 560.0925pt x 274.02374pt>
+File: figures/stepper.png Graphic file (type png)
+<use figures/stepper.png>
+Package pdftex.def Info: figures/stepper.png  used on input line 131.
+(pdftex.def)             Requested size: 455.24411pt x 222.73573pt.
+<figures/20190410_135905.jpg, id=127, 728.4816pt x 409.7709pt>
 File: figures/20190410_135905.jpg Graphic file (type jpg)
 <use figures/20190410_135905.jpg>
-Package pdftex.def Info: figures/20190410_135905.jpg  used on input line 134.
+Package pdftex.def Info: figures/20190410_135905.jpg  used on input line 141.
 (pdftex.def)             Requested size: 455.24411pt x 256.07492pt.
-<figures/20190410_135853.jpg, id=120, 661.2705pt x 372.00983pt>
-File: figures/20190410_135853.jpg Graphic file (type jpg)
-<use figures/20190410_135853.jpg>
-Package pdftex.def Info: figures/20190410_135853.jpg  used on input line 141.
-(pdftex.def)             Requested size: 455.24411pt x 256.10806pt.
  [3pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.145 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-3}) has been already used, duplicate ignored
+l.145 	
+       pdfTeX warning (ext4): destination with the same identifier (name{figure
+.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.145 
-       <./figures/pwm.png> <./figures/20190410_135905.jpg>]
-<figures/diagramPWM.png, id=127, 713.66624pt x 81.30376pt>
-File: figures/diagramPWM.png Graphic file (type png)
-<use figures/diagramPWM.png>
-Package pdftex.def Info: figures/diagramPWM.png  used on input line 152.
-(pdftex.def)             Requested size: 364.19667pt x 41.4904pt.
+l.145 	
+        <./figures/servo.png> <./figures/stepper.png>]
+<figures/20190410_135853.jpg, id=136, 661.2705pt x 372.00983pt>
+File: figures/20190410_135853.jpg Graphic file (type jpg)
+<use figures/20190410_135853.jpg>
+Package pdftex.def Info: figures/20190410_135853.jpg  used on input line 148.
+(pdftex.def)             Requested size: 455.24411pt x 256.10806pt.
+<figures/diagramplatforma.png, id=137, 684.75826pt x 122.859pt>
+File: figures/diagramplatforma.png Graphic file (type png)
+<use figures/diagramplatforma.png>
+Package pdftex.def Info: figures/diagramplatforma.png  used on input line 159.
+(pdftex.def)             Requested size: 364.19667pt x 65.34364pt.
  [4pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.179 			if 
-            ((pos == 0) || (pos == 2))pdfTeX warning (ext4): destination with t
-he same identifier (name{figure.5}) has been already used, duplicate ignored
+l.163 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.179 			if 
-            ((pos == 0) || (pos == 2)) <./figures/20190410_135853.jpg> <./figur
-es/diagramPWM.png>]
-<figures/wiz.png, id=152, 1568.86125pt x 932.48375pt>
+l.163 
+       <./figures/20190410_135905.jpg> <./figures/20190410_135853.jpg>]
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.214 \begin{lstlisting}[tabsize=2]
+                                    <./figures/diagramplatforma.png>]
+<figures/wiz.png, id=194, 1568.86125pt x 932.48375pt>
 File: figures/wiz.png Graphic file (type png)
 <use figures/wiz.png>
-Package pdftex.def Info: figures/wiz.png  used on input line 248.
+Package pdftex.def Info: figures/wiz.png  used on input line 255.
 (pdftex.def)             Requested size: 455.24411pt x 270.5841pt.
- [5]
-<figures/gy.png, id=215, 343.2825pt x 342.68025pt>
+ [6]
+<figures/gy.png, id=230, 343.2825pt x 342.68025pt>
 File: figures/gy.png Graphic file (type png)
 <use figures/gy.png>
-Package pdftex.def Info: figures/gy.png  used on input line 256.
+Package pdftex.def Info: figures/gy.png  used on input line 263.
 (pdftex.def)             Requested size: 170.71652pt x 170.41418pt.
- [6pdfTeX warning (ext4): destination with the same identifier (name{figure.6})
+
+[7pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.272 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.272 \newpage
+               <./figures/wiz.png> <./figures/gy.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 288.
+ [8pdfTeX warning (ext4): destination with the same identifier (name{cite.pa1})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.264 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-7}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.264 
-       <./figures/wiz.png> <./figures/gy.png>] [7] ("Etap 2.bbl"
-
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
-
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
- [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
+l.288 \end{document}
+                    ]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 288.
  ("Etap 2.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 271.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 271.
-Package rerunfilecheck Info: File `"Etap 2".out' has not changed.
-(rerunfilecheck)             Checksum: 3EC534BA355479100611CE765ABAE9C4;3514.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 271.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 288.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 288.
+
+
+Package rerunfilecheck Warning: File `"Etap 2".out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"Etap 2".out':
+(rerunfilecheck)             Before: CB10E5EE18B038A739B8CEC520B29391;4037
+(rerunfilecheck)             After:  59EBF7DE47271CE9FC6CD22735AD848E;3887.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 288.
  ) 
 Here is how much of TeX's memory you used:
- 14300 strings out of 493801
- 194549 string characters out of 3158049
- 601366 words of memory out of 3000000
- 17748 multiletter control sequences out of 15000+200000
- 19524 words of font info for 49 fonts, out of 3000000 for 9000
+ 14312 strings out of 493801
+ 194676 string characters out of 3158050
+ 558366 words of memory out of 3000000
+ 17757 multiletter control sequences out of 15000+200000
+ 20210 words of font info for 50 fonts, out of 3000000 for 9000
  625 hyphenation exceptions out of 8191
- 33i,8n,51p,573b,1878s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dp
-i600\ecrm0900.pk> <C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\
-fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Papa Smerf\AppData\Lo
-cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Papa S
-merf\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <
-C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
-\ecbx1440.pk> <C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkn
-appen/ec/dpi600\eccc1200.pk> <C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\font
-s/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Papa Smerf\AppData\Local\
-MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Papa Smerf
-\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\U
-sers\Papa Smerf\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecc
-c1440.pk> <C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappe
-n/ec/dpi600\eccc1728.pk><E:/Programy/Miktex/fonts/type1/public/amsfonts/cm/cmsy
-9.pfb>
-Output written on "Etap 2.pdf" (9 pages, 3713938 bytes).
+ 33i,8n,51p,573b,1212s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{subsection.3.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+ <C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
+00\ecti1000.pk> <C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/j
+knappen/ec/dpi600\ecrm0900.pk> <C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\fo
+nts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Papa Smerf\AppData\Loca
+l\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Papa Sme
+rf\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:
+\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
+cbx1000.pk> <C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecbx1440.pk> <C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\fonts/
+pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\Papa Smerf\AppData\Local\Mi
+KTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Papa Smerf\A
+ppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Use
+rs\Papa Smerf\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2
+074.pk> <C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
+ec/dpi600\eccc1440.pk> <C:\Users\Papa Smerf\AppData\Local\MiKTeX\2.9\fonts/pk/l
+jfour/jknappen/ec/dpi600\eccc1728.pk><E:/Programy/Miktex/fonts/type1/public/ams
+fonts/cm/cmsy9.pfb>
+Output written on "Etap 2.pdf" (9 pages, 3240616 bytes).
 PDF statistics:
- 686 PDF objects out of 1000 (max. 8388607)
- 107 named destinations out of 1000 (max. 500000)
- 180 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 738 PDF objects out of 1000 (max. 8388607)
+ 111 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 
