@@ -47,7 +47,7 @@ This project was created as academic project in the Mobile Robots subject. The p
 - Implementation of a self-positioning platform towards the light
 - Implementation of 3D charts representing light intensity
 - Implementation of robot movement algorithms
-## Unrealized
+### Unrealized
 - Implementation of the algorithm for retrieving information about the location
 - Implementation of the microcontroller - PC connection and data transfer
 
