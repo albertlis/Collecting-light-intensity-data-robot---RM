@@ -8,7 +8,7 @@
 * [Features](#features)
 * [Status](#status)
 * [Contact](#contact)
-* [Contributors](#Constributors)
+* [Contributors](#Contributors)
 
 ## General info
 This project was created as academic project in the Mobile Robots subject. The point was to biuld a robot which collect information on light intensity in the field. The second ponit was write an application that presents this measurements.
@@ -57,5 +57,5 @@ Project is: _finished_
 ## Contact
 albert.lis.1996@gmail.com - feel free to contact me!
 
-## Constributors
+## Contributors
 [Albert Lis](https://github.com/albertlis) [MichalMorun](https://github.com/MichalMorun) [plangkafel](https://github.com/plangkafel)
